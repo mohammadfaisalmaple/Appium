@@ -1,17 +1,17 @@
 {
-  "name": "whatsapp-automation",
+  "name": "whatsapp-activaton",
   "version": "1.0.0",
-  "description": "A script to automate WhatsApp installation and actions",
+  "description": "Refactored code into MVC structure with logging",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nohup node index.js > /var/logs/whatsapp-activaton/output.log 2>&1 &"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "wd": "^1.11.3"
-  },
-  "devDependencies": {
-    "child_process": "^1.0.2"
+    "child_process": "^1.0.2",
+    "libphonenumber-js": "^1.11.4",
+    "path": "^0.12.7",
+    "wd": "^1.11.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
   }
 }
